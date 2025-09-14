@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="logo icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="img-container">
+            <img src="img/jacinto-1.jpg" alt="Music Player">
+        </div>
+        <h2 id="title">Nadaaniyan</h2>
+        <h3 id="artist">Akshath</h3>
+        <audio src="music/jacinto-1.mp3"></audio>
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">2:49</span>
+            </div>
+    </div>
+    <div class="player-controls">
+        <i class="fas fa-solid fa-backward" id="prev" tittle="Previous"></i>
+        <i class="fas fa-solid fa-play" id="play" tittle="Play"></i>
+        <i class="fas fa-solid fa-forward" id="next" tittle="next"></i>
+    </div>
+    </div>
+    <!-- Script -->
+     <script src="https://kit.fontawesome.com/9f02dd0254.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
