@@ -12,6 +12,29 @@ body{
     align-items: center;
     background: linear-gradient(45deg,#0a0a0a,#3A4452);
 }
+nav {
+  font-family: oswald, sans-serif;
+  position: fixed;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 25px;
+  width: 100vw;
+  background: rgb(0 0 0 / 50%);
+}
+
+a {
+  margin-right: 25px;
+  color:rgb(150, 65, 255);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color:rgba(255, 255, 255, 0.9);
+  border-bottom: 3px solid;
+}
 .calculator{
     border: 1px solid #717377;
     padding: 20px;
