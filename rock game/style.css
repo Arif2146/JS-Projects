@@ -21,12 +21,31 @@ body {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
+#player .far,
+#player .choice{
+  color: #3B58B6;
+  cursor: pointer;
+}
+#computer .far,
+#computer .choice{
+  color: #E94B3C;
+  cursor: default;
+}
+
+.computer-icons, .player-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.selected {
+  color: black !important;
+}
 
 .header {
   background: #3B58B6;
   height: 100px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +93,7 @@ h2 {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .game-container {
-
+    width: 95%;
     height: 580px;
   }
 
