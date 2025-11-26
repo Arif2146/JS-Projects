@@ -25,6 +25,9 @@ const choices = {
   lizard: { name: 'Lizard', defeats: ['paper', 'spock'] },
   spock: { name: 'Spock', defeats: ['scissors', 'rock'] },
 };
+
+let playerScoreNumber=0;
+let computerScoreNumber=0;
 let computerChoice = '';
 function resetSelected() {
   allGameIcons.forEach((icon) => {
@@ -46,11 +49,6 @@ function computerRandomChoice() {
   }
 }
 
-function checkResult() {
-  resetSelected();
-  computerRandomChoice();
-  displayComputerChoice();
-}
 function displayComputerChoice() {
   
   switch (computerChoice) {
@@ -79,8 +77,32 @@ function displayComputerChoice() {
   }
 }
 
+function ubdateScore(playerChoice){
+   if (playerChoice === computerChoice) {
+    resultText.textContent = "It's a tie.";
+  } else{
+    const choice = choices[playerChoice];
+    if (choice.defeats.indexOf(computerChoice) > -1) {
+      resultText.textContent = "You win!";
+      playerScoreNumber++;
+      playerScoreEl.textContent = playerScoreNumber;
+    } else {
+      resultText.textContent = "You lose!";
+      computerScoreNumber++;
+      computerScoreEl.textContent = computerScoreNumber;
+    }
+  }
+}
+
+function checkResult(playerChoice) {
+  resetSelected();
+  computerRandomChoice();
+  displayComputerChoice();
+  ubdateScore(playerChoice);
+}
+
 function select(playerChoice) {
-  checkResult();
+  checkResult(playerChoice);
   switch (playerChoice) {
     case 'rock':
       playerRock.classList.add('selected');
@@ -105,4 +127,15 @@ function select(playerChoice) {
     default:
       break;
   }
+}
+
+function resetAll() {
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreEl.textContent = computerScoreNumber;
+  playerChoiceEl.textContent = '';
+  computerChoiceEl.textContent = '';
+  resultText.textContent = '';
+  resetSelected();
 }
