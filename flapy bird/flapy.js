@@ -6,7 +6,7 @@ let boardHeight = 640;
 let context;
 
 //bird
-let birdWidth = 34; //width/height ratio = 408/228 = 17/12
+let birdWidth = 34; 
 let birdHeight = 24;
 let birdX = boardWidth/8;
 let birdY = boardHeight/2;
@@ -21,7 +21,7 @@ let bird = {
 
 //pipes
 let pipeArray = [];
-let pipeWidth = 64; //width/height ratio = 384/3072 = 1/8
+let pipeWidth = 64; 
 let pipeHeight = 512;
 let pipeX = boardWidth;
 let pipeY = 0;
@@ -143,7 +143,7 @@ function placePipes() {
         passed : false
     }
     pipeArray.push(bottomPipe);
-}
+}[]
 
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
